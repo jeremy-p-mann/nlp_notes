@@ -2,9 +2,26 @@
 
 Developing this repo requires npm
 
+## Basics
+
 ```bash
 brew install node
 ```
+
+To install the package:
+
+```bash
+npm install
+```
+
+To see your changes live:
+
+```bash
+npm run dev
+```
+
+Main branch is protected, so please branch off of main and open a PR for new
+changes.
 
 ## Adding a New Page
 
@@ -22,6 +39,8 @@ export const SIDEBAR: Sidebar = {
 // it's hopefully clear how to do this.
 }
 ```
+
+## Branches
 
 ## 🧞 Commands
 
