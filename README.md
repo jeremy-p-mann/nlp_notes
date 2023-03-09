@@ -1,27 +1,10 @@
-# Astro Starter Kit: Docs Site
+# NLP Notes
+
+Developing this repo requires npm
 
 ```bash
-npm create astro@latest -- --template docs
+brew install node
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/docs)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/docs)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/docs/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![docs](https://user-images.githubusercontent.com/4677417/186189283-0831b9ab-d6b9-485d-8955-3057e532ab31.png)
-
-## Features
-
-- ✅ **Full Markdown support**
-- ✅ **Responsive mobile-friendly design**
-- ✅ **Sidebar navigation**
-- ✅ **Search (powered by Algolia)**
-- ✅ **Multi-language i18n**
-- ✅ **Automatic table of contents**
-- ✅ **Automatic list of contributors**
-- ✅ (and, best of all) **dark mode**
 
 ## 🧞 Commands
 
@@ -36,11 +19,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-To deploy your site to production, check out our [Deploy an Astro Website](https://docs.astro.build/guides/deploy) guide.
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+For basics on astro see the [documentation](https://docs.astro.build)
 
 ## Customize This Theme
 
@@ -77,7 +56,6 @@ layout: ../../layouts/MainLayout.astro
 
 # Page content...
 ```
-
 For more SEO related properties, look at `src/components/HeadSEO.astro`
 
 ### Sidebar navigation
@@ -97,80 +75,3 @@ export const SIDEBAR = {
   ],
 };
 ```
-
-Note the top-level `en` key: This is needed for multi-language support. You can change it to whatever language you'd like, or add new languages as you go. More details on this below.
-
-### Multiple Languages support
-
-The Astro docs template supports multiple languages out of the box. The default theme only shows `en` documentation, but you can enable multi-language support features by adding a second language to your project.
-
-To add a new language to your project, you'll want to extend the current `src/content/docs/[lang]/...` layout:
-
-```diff
- 📂 src/content/docs
- ┣ 📂 en
- ┃ ┣ 📜 page-1.md
- ┃ ┣ 📜 page-2.md
- ┃ ┣ 📜 page-3.astro
-+ ┣ 📂 es
-+ ┃ ┣ 📜 page-1.md
-+ ┃ ┣ 📜 page-2.md
-+ ┃ ┣ 📜 page-3.astro
-```
-
-You'll also need to add the new language name to the `KNOWN_LANGUAGES` map in your `src/config.ts` file. This will enable your new language switcher in the site header.
-
-```diff
-// src/config.ts
-export const KNOWN_LANGUAGES = {
-  English: 'en',
-+  Spanish: 'es',
-};
-```
-
-Last step: you'll need to add a new entry to your sidebar, to create the table of contents for that language. While duplicating every page might not sound ideal to everyone, this extra control allows you to create entirely custom content for every language.
-
-> Make sure the sidebar `link` value points to the correct language!
-
-```diff
-// src/config.ts
-export const SIDEBAR = {
-  en: [
-    { text: 'Section Header', header: true, },
-    { text: 'Introduction', link: 'en/introduction' },
-    // ...
-  ],
-+  es: [
-+    { text: 'Encabezado de sección', header: true, },
-+    { text: 'Introducción', link: 'es/introduction' },
-+    // ...
-+  ],
-};
-
-// ...
-```
-
-If you plan to use Spanish as the default language, you just need to modify the redirect path in `src/pages/index.astro`:
-
-```diff
-<script>
-- window.location.pathname = `/en/introduction`;
-+ window.location.pathname = `/es/introduction`;
-</script>
-```
-
-You can also remove the above script and write a landing page in Spanish instead.
-
-### What if I don't plan to support multiple languages?
-
-That's totally fine! Not all projects need (or can support) multiple languages. You can continue to use this theme without ever adding a second language.
-
-If that single language is not English, you can just replace `en` in directory layouts and configurations with the preferred language.
-
-### Search (Powered by Algolia)
-
-[Algolia](https://www.algolia.com/) offers a free service to qualified open source projects called [DocSearch](https://docsearch.algolia.com/). If you are accepted to the DocSearch program, provide your API Key & index name in `src/config.ts` and a search box will automatically appear in your site header.
-
-Note that Aglolia and Astro are not affiliated. We have no say over acceptance to the DocSearch program.
-
-If you'd prefer to remove Algolia's search and replace it with your own, check out the `src/components/Header.astro` component to see where the component is added.
