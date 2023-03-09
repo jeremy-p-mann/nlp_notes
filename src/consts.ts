@@ -1,6 +1,6 @@
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
+	title: 'JKM\'s NLP Notes',
+	description: 'Jeremy, Kelsey, and Michelle\'s Notes on Natural Language Processing',
 	defaultLanguage: 'en-us',
 } as const;
 
@@ -36,11 +36,10 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Section Header': [
+		'Basics': [
 			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
+			{ text: 'Next Page', link: 'en/page-2' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+		'Beyond the Basics?': [{ text: 'BEYOND', link: 'en/page-4' }],
 	},
 };

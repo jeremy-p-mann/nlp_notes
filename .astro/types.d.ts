@@ -76,34 +76,6 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"docs": {
-"en/introduction.md": {
-  id: "en/introduction.md",
-  slug: "en/introduction",
-  body: string,
-  collection: "docs",
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] },
-"en/page-2.md": {
-  id: "en/page-2.md",
-  slug: "en/page-2",
-  body: string,
-  collection: "docs",
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] },
-"en/page-3.md": {
-  id: "en/page-3.md",
-  slug: "en/page-3",
-  body: string,
-  collection: "docs",
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] },
-"en/page-4.md": {
-  id: "en/page-4.md",
-  slug: "en/page-4",
-  body: string,
-  collection: "docs",
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] },
 },
 
 	};

@@ -6,6 +6,23 @@ Developing this repo requires npm
 brew install node
 ```
 
+## Adding a New Page
+
+First, create the markdown file, e.g.:
+
+```bash
+cp ./src/content/docs/en/template.md ./src/content/docs/en/template.md
+```
+
+Edit the title and description, then add content. Once you have the page, you
+integrate it into the sidebar by modifying `./src/consts.ts`, see:
+
+```javascript
+export const SIDEBAR: Sidebar = {
+// it's hopefully clear how to do this.
+}
+```
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
