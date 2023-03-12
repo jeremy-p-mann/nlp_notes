@@ -40,7 +40,7 @@ export const SIDEBAR: Sidebar = {
 		'Basics': [
 			{ text: 'Introduction', link: 'en/introduction' },
 			{ text: 'Unicode', link: 'en/unicode' },
-			{ text: 'Tokenization', link: 'en/tokenizaton' },
+			// { text: 'Tokenization', link: 'en/tokenization' },
 		],
 		'References': [{ text: 'Text References', link: 'en/text_references' }],
 	},
