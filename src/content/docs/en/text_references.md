@@ -10,3 +10,7 @@ description: "Useful References"
  
 ## Papers
 
+
+## Websites
+
+1. [Unicode Standard 15.0](https://www.unicode.org/versions/Unicode15.0.0/UnicodeStandard-15.0.pdf)
