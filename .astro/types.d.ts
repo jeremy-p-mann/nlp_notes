@@ -76,6 +76,20 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"docs": {
+"en/tokenization.md": {
+  id: "en/tokenization.md",
+  slug: "en/tokenization",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] },
+"en/unicode.md": {
+  id: "en/unicode.md",
+  slug: "en/unicode",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] },
 },
 
 	};

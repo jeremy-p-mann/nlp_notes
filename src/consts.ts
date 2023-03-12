@@ -39,6 +39,8 @@ export const SIDEBAR: Sidebar = {
 	en: {
 		'Basics': [
 			{ text: 'Introduction', link: 'en/introduction' },
+			{ text: 'Unicode', link: 'en/unicode' },
+			{ text: 'Tokenization', link: 'en/tokenizaton' },
 		],
 		'References': [{ text: 'Text References', link: 'en/text_references' }],
 	},
